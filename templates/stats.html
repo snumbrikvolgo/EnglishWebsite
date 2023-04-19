@@ -1,0 +1,66 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Статистика по словам
+{% endblock %}
+
+{% block page-lead %}
+Количество слов, длины слов
+{% endblock %}
+
+{% block content %}
+<div class="container px-4 py-5" id="stats">
+    <div>
+        <h3 class="py-2">Количество слов</h3>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4>{{ terms_all }}</h4>
+            <p class="text-muted">всего</p>
+        </div>
+        <div class="col-md-4">
+            <h4>{{ terms_own }}</h4>
+            <p class="text-muted">изначально бывших в базе</p>
+        </div>
+        <div class="col-md-4">
+            <h4>{{ terms_added }}</h4>
+            <p class="text-muted">добавленных через <a href="/add-term">форму добавления слова</a></p>
+        </div>
+    </div>
+    <div>
+        <h3 class="py-2">Длина английских слов</h3>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4>{{ word_letter_avg }}</h4>
+            <p class="text-muted">Среднее количество букв в английском слове</p>
+        </div>
+        <div class="col-sm-4">
+            <h4>{{ word_letter_max }}</h4>
+            <p class="text-muted">Максимальное количество букв в английском слове</p>
+        </div>
+        <div class="col-sm-4">
+            <h4>{{ word_letter_min }}</h4>
+            <p class="text-muted">Минимальное количество букв в английском слове</p>
+        </div>
+    </div>
+    <div>
+        <h3 class="py-2">Длина переводов английских слов</h3>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <h4>{{ trans_letter_avg }}</h4>
+            <p class="text-muted">Среднее количество букв в переводе английского слова</p>
+        </div>
+        <div class="col-sm-4">
+            <h4>{{ trans_letter_max }}</h4>
+            <p class="text-muted">Максимальное количество букв в переводе английского слова</p>
+        </div>
+        <div class="col-sm-4">
+            <h4>{{ trans_letter_min }}</h4>
+            <p class="text-muted">Минимальное количество букв в переводе английского слова</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

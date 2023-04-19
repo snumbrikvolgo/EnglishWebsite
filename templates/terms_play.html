@@ -1,0 +1,35 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Вспомни английское слово по его переводу
+{% endblock %}
+
+{% block page-lead %}
+Тебе предложен русский перевод английского слова - нужно вспомнить само слово
+{% endblock %}
+
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-remind">
+  <form method="post">
+      <div class="row px-5 py-2">
+          <h3>Вспомни английский вариант слова</h3>
+      </div>
+      <div class="row px-5 py-2">
+          <div class="col-md-6">
+              <label for="new_translation">Перевод на русский</label><br>
+              <b>{{ trans }}</b>
+              <!-- <textarea type="text" class="form-control input-lg" name="new_translation" id="new_translation" aria-describedby="definition_note" rows="3"></textarea>
+              <div id="definition_note" class="form-text">Постарайтесь уложиться в одно, максимум два предложения</div> -->
+          </div>
+          <div class="col-md-6">
+            <label for="known_word">Выражение или слово</label>
+            <input type="text" class="form-control input-lg" name="known_word" id="known_word" placeholder="Введи английское слово" value required>
+          </div>
+      </div>
+      <div class="row px-5 py-2">
+          <button type="submit" class="btn btn-primary" formaction="/check-term">Проверить</button>
+      </div>
+  </form>
+</div>
+{% endblock %}

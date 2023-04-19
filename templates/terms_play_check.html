@@ -1,0 +1,30 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+{% if success %}
+Браво
+{% else %}
+Потренируйтесь еще
+{% endif %}
+{% endblock %}
+
+{% block page-lead %}{% endblock %}
+
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="term-form-result">
+  <h2 class="pb-2 border-bottom">Результат игры</h2>
+  {% if success %}
+  <p>{{ comment }}</p>
+  {% else %}
+  <p>Вы ввели <b>{{ user_ans }}</b><br>
+  Правильный ответ <b>{{ correct }}</b></p>
+  {% endif %}
+
+  <h2 class="pb-2 border-bottom">Что можно сделать?</h2>
+  <ul>
+      <li>Вспомнить еще одно <a href="/terms-play">слово или выражение</a></li>
+      <li>Вернуться на <a href="/">главную</a></li>
+  </ul>
+</div>
+{% endblock %}

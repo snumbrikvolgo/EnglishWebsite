@@ -1,0 +1,36 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Создание конспекта занятия
+{% endblock %}
+
+{% block page-lead %}
+Добавь конспект занятия по английскому, чтобы потом повторить его
+{% endblock %}
+
+
+{% block content %}
+<div class="container-sm px-5 py-5" id="note-form">
+  <form method="post">
+      <div class="row px-5 py-2">
+          <h3>Новый конспект занятия</h3>
+      </div>
+      <div class="row px-5 py-2">
+          <div class="col-md-12">
+              <label for="new_note">Тема занятия</label>
+              <input type="text" class="form-control input-lg" name="new_note" id="new_note" placeholder="Введите тему занятия" value required>
+          </div>
+      </div>
+      <div class="row px-5 py-2">
+        <div class="col-md-12">
+            <label for="new_note_description">Конспект занятия</label>
+            <textarea type="text" class="form-control input-lg" name="new_note_description" id="new_note_description" aria-describedby="definition_note" rows="10"></textarea>
+            <div id="definition_note" class="form-text">Конспектируйте подробно, чтобы ничего не упустить</div>
+        </div>
+    </div>
+      <div class="row px-5 py-2">
+          <button type="submit" class="btn btn-primary" formaction="/send-note">Сохранить</button>
+      </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Конспекты занятий
+{% endblock %}
+
+{% block page-lead %}
+Список добавленных конспектов занятий
+{% endblock %}
+
+
+{% block content %}
+{% for id, name, note in notes %}
+  <div class="container-sm px-5 py-5" id="note-form">
+    <h2>{{ id }}. {{ name }}</h2>
+    {% for line in note %}
+    <p>{{ line }}</p>
+    {% endfor %}
+  </div>
+{% endfor %}
+{% endblock %}
