@@ -1,5 +1,5 @@
 {% extends "base_page.html" %}
-
+{% load static %}
 {% block page-title %}
 Английские слова и их перевод
 {% endblock %}
@@ -137,6 +137,21 @@
                 рядом с названием сайта во вкладке или окне браузера. Сейчас её нет — но вы можете её добавить.
             </p>
         </div>
+    </div>
+    <h2 class="pb-2 border-bottom">Об авторе проекта</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+        <div class="col-lg-8">
+            <p>Умница, красавица и просто хорошая девочка. Дожила до 5-го курса МФТИ, думала,
+                легко будет в магистратуре, а тут надо проекты по питону клепать.
+                Ну мы им всем покажем, да?
+            </p>
+        </div>
+        <div class="col-lg-1">
+            <div class="image-cropper">
+                <img src="{% static 'me.png' %}" alt="Автор проекта" width="256" height="256", class="rounded"/>
+            </div>
+        </div>
+        
     </div>
 </div>
 {% endblock %}

@@ -1,0 +1,13 @@
+.btn {
+    color: white;
+    background-color: rgb(131, 121, 193);
+    border: none;
+  }
+  .image-cropper {
+    width: 256px;
+    height: 256px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  body { padding: 20px;} /* not necessary */
