@@ -1,13 +1,16 @@
-.btn {
+.btn{
     color: white;
     background-color: rgb(131, 121, 193);
     border: none;
   }
-  .image-cropper {
+.image-cropper {
     width: 256px;
     height: 256px;
     position: relative;
     overflow: hidden;
     border-radius: 50%;
+}
+.own:link, .own:visited, .own:hover, .own:active  {
+    color:rgb(131, 121, 193);
+    text-decoration: none;
   }
-  body { padding: 20px;} /* not necessary */

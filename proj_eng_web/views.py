@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.core.cache import cache
 from . import terms_work
-
-
 def index(request):
     return render(request, "index.html")
 
@@ -18,11 +16,25 @@ def add_term(request):
 
 def send_term(request):
     if request.method == "POST":
+        print('kek')
         cache.clear()
         user_name = request.POST.get("name")
         user_email = request.POST.get("email")
         new_term = request.POST.get("new_word", "")
         new_definition = request.POST.get("new_translation", "").replace(";", ",")
+        # new_image = request.POST.get("customFile", "")
+        # new_image.save()
+        # form = UploadFileForm(request.POST, request.FILES)
+        # print(form)
+
+        # if form.is_valid():
+        #     form = UserImageForm(request.POST, request.FILES)  
+        #     if form.is_valid():  
+        #         form.save()  
+    
+        #     # Getting the current instance object to display in the template  
+        #     img_object = form.instance  
+        # context = {"user": 'kek'}
         context = {"user": user_name}
         if len(new_definition) == 0 and len(new_term) == 0:
             context["success"] = False
