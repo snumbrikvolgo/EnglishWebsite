@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block pagetitle %}{% endblock %}</title>
+    <meta charset="utf-8" />
     <!-- load static -->
     {% load static %}
-    <!-- CSS -->
-    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'my_style.css' %}" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{% block pagetitle %}{% endblock %}</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/png" href="/static/eng.png">
+    <!-- Custom Google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="{% static 'styles.css' %}" rel="stylesheet">
 </head>
-<head>
-    <title>Django Favicon Tutorial</title>
-    <link rel="shortcut icon" type="image/png" href="{% static 'eng.png' %}"/>
-  </head>
 <body>
 <main>
     <div class="container">
         <header class="border-bottom">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <div class="fs-2 mb-3">
-                    <img src="{% static 'eng.png' %}" alt="Сайт для изучения английского языка" width="64" height="64"/>
+                    <img src="static/eng.png" alt="Сайт для изучения английского языка" width="64" height="64"/>
                     <span>Doodle</span>
                 </div>
             </a>
         </header>
-        <div class="p-5 mb-4 bg-light rounded-3" id="title-box">
-            <div class="container-fluid py-5">
-                <h1 class="display-1 fw-bold">{% block page-title %}{% endblock %}</h1>
-                <p class="col-md-8 fs-4">{% block page-lead %}{% endblock %}</p>
+
+        <header class="py-5">
+            <div class="container px-5 pb-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-xxl-5">
+                        <!-- Header text content-->
+                        <div class="text-center text-xxl-start">
+                            <div class="badge bg-gradient-primary-to-secondary text-white mb-4"><div class="text-uppercase">English &middot; Python &middot; MIPT</div></div>
+                            <div class="fs-3 fw-light text-muted">{% block page-lead %}{% endblock %}</div>
+                            <h1 class="display-3 fw-bolder mb-5"><span class="text-gradient d-inline">{% block page-title %}{% endblock %}</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-xxl-7">
+                        <!-- Header profile picture-->
+                        <div class="d-flex justify-content-center mt-5 mt-xxl-0">
+                            <div class="profile bg-gradient-primary-to-secondary">
+                                <img class="profile-img" src="static/ben.png" alt="..." />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </header>
         {% block content %}{% endblock %}
-        <footer class="footer pt-3 mt-4 text-muted border-top">Project for MIPT Python course by Elizaveta Zazhigina© 2023</footer>
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Project for MIPT Python course by Elizaveta Zazhigina© 2023</div></div>
+                </div>
+            </div>
+        </footer>
     </div>
+    
 </main>
 </body>
 </html>

@@ -6,7 +6,7 @@
 
 {% block page-lead %}
 Это Web-приложение для изучения английского языка <br/>
-Добавляйте новые слова, заучивайте, консепектируйте уроки
+Добавляйте новые слова, заучивайте, конспектируйте уроки
 {% endblock %}
 
 {% block content %}
@@ -88,7 +88,7 @@
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Повторение - чья-то мать</h3>
+                <h3 class="fs-2">Повторение — чья-то мать</h3>
                 <p>Не забывай освежать в памяти законспектированные занятия</p>
                 <a href="/notes" class="btn btn-primary">
                     Повторить
@@ -96,71 +96,39 @@
             </div>
         </div>
     </div>
-    <h2 class="pb-2 border-bottom">Что можете сделать вы?</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Добавить ещё одну форму</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Чтобы получить максимальную оценку по проекту, нужно две страницы, которые <span class="fst-italic">показывают</span>
-            контент, а две страницы, которые <span class="fst-italic">принимают</span> контент. Одна страница с
-            POST-запросом создана — это <a href="/add-term">форма сбора терминов</a>. Добавьте ещё одну форму и view, обрабатывающий её!</p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Разнообразить контент</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Этот проект — про математику. В условии проекта в курсе — иностранные языки. Измените содержимое страниц,
-                чтобы они были полезны в контексте изучения иностранного языка (несколько примеров есть в описании проекта).</p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Изменить вёрстку и/или дизайн-систему</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>Этот проект использует <a href="https://getbootstrap.com">Bootstrap</a>. Попробуйте другие дизайн-системы, например:
-                <ul>
-                    <li><a href="https://materializecss.com">Materialize</a></li>
-                    <li><a href="https://semantic-ui.com">Semantic UI</a></li>
-                    <li><a href="https://get.foundation/templates.html">Foundation</a></li>
-                </ul>
-            </p>
-            <p>
-                Если же вам хочется оставить Bootstrap — измените вёрстку! Добавьте картинок, замените стили — словом, пробудите
-                внутреннего художника.
-            </p>
-            <p>
-                <span class="fst-italic">Вариант улучшения:</span> как правило, у сайта есть фавикон — маленькая иконка, отображающаяся
-                рядом с названием сайта во вкладке или окне браузера. Сейчас её нет — но вы можете её добавить.
-            </p>
-        </div>
-    </div>
-    <h2 class="pb-2 border-bottom">Об авторе проекта</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-8">
-            <p>Умница, красавица и просто хорошая девочка. Дожила до 5-го курса МФТИ, думала,
-                легко будет в магистратуре, а тут надо проекты по питону клепать.
-                Ну мы им всем покажем, да?
-            </p>
-            <br></br>
-            <img src="{% static 'telegram.png' %}" alt="Телеграм для связи" width="32" height="32", class="rounded"/>
-            <a href="https://t.me/snumbrikvolgo" class="own">snumbrikvolgo</a>
-            <br></br>
-            <div class="own">
-                <img src="{% static 'github.png' %}" alt="Гитхаб для связи" width="32" height="32", class="rounded"/>
-                <a href="https://github.com/snumbrikvolgo" class="own">snumbrikvolgo</a>
-            </div>
+    <section class="bg-light py-5">
+        <div class="container px-5">
+            <div class="row gx-5 justify-content-center">
+                <div class="col-xxl-8">
+                    <div class="text-center my-5">
+                        <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">Об авторе проекта</span></h2>
+                        <p class="lead fw-light mb-4">Привет! Меня зовут Елизавета Зажигина!</p>
 
-        </div>
-        <div class="col-lg-1">
-            <div class="image-cropper">
-                <img src="{% static 'me.png' %}" alt="Автор проекта" width="256" height="256", class="rounded"/>
+                        <div class="row gx-5 align-items-center">
+                            <div class="col-xxl-7">
+                                <p class="text-muted">Умница, красавица и просто хорошая девочка. Дожила до 5-го курса МФТИ, думала,
+                                    легко будет в магистратуре, а тут надо проекты по питону клепать.
+                                    Ну мы им всем покажем, да?</p>
+                            </div>
+                            <div class="col-xxl-5">
+                                <div class="image-cropper">
+                                    <img src="{% static 'me.png' %}" alt="Автор проекта" width="256" height="256", class="rounded"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-lg-1">
+
+                        </div>
+                        <div class="d-flex justify-content-center fs-2 gap-4">
+                            <a class="text-gradient" href="https://t.me/snumbrikvolgo"><i class="bi bi-telegram"></i></a>
+                            <a class="text-gradient" href="https://github.com/snumbrikvolgo"><i class="bi bi-github"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        
-    </div>
+    </section>    
 </div>
 {% endblock %}
