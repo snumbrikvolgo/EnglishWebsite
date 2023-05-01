@@ -87,10 +87,15 @@ def get_notes_to_show():
     with open("./data/notes.csv", "r", encoding="utf-8") as f:
         for line in f.readlines():
             id, name = line.strip("\n").split(";")
+            print(id, name)
             notes.append([id, name])
             ids.append(int(id))
-    for id in ids:
-        with open(f"./data/notes/note_{id}", "r", encoding="utf-8") as f:
-            notes[id-1].append([l.strip('\n') for l in f.readlines()])
-    print(notes)
+    for count, id in enumerate(ids):
+        try:
+            with open(f"./data/notes/note_{id}", "r", encoding="utf-8") as f:
+                notes[count].append([l.strip('\n') for l in f.readlines()])
+        except:
+            notes[count].append([""])
+        else:
+            print(notes[count])
     return notes
